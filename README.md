@@ -30,14 +30,14 @@ Runs a full analysis pipeline in one command:
 
 ## Why this is different from a typical student project
 
-- Every design parameter traces to a real IEEE/ANSI standard — no
+- Every design parameter traces to a real IEEE/ANSI standard, no
   assumed or AI-generated values. See docs/design_basis.md.
 - Load profile uses real hourly demand data from the EIA Open Data
   API (WACM balancing authority, the actual grid region for Fort
   Collins, CO), not assumed static loads.
 - The IEEE 13-bus feeder uses the official EPRI/Kersting published
   test case, with the idealized infinite-bus source replaced by a
-  real finite-impedance substation — showing the actual voltage impact
+  real finite-impedance substation, showing the actual voltage impact
   of source impedance on feeder performance.
 - The entire pipeline is config-driven and parametric: change one
   value in config/system_parameters.py and regenerate everything.
