@@ -1,0 +1,15 @@
+clear
+
+New Circuit.SubstationStudy
+~ basekv=69 pu=1.0 phases=3 bus1=UtilityBus
+~ MVAsc3=5000 MVAsc1=4500
+
+New Transformer.T1 phases=3 windings=2
+~ wdg=1 bus=UtilityBus conn=delta kv=69 kva=10000 %r=0.5
+~ wdg=2 bus=SubstationBus conn=wye kv=13.8 kva=10000 %r=0.5
+~ XHL=7.984
+
+Set Voltagebases=[69 13.8]
+CalcVoltageBases
+Solve
+

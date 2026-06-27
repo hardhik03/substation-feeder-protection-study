@@ -7,6 +7,9 @@ sheets) imports from here. Change a value once, regenerate everything
 downstream — never hand-edit a number inside a generated file directly.
 """
 
+# --- Real-time grid data source ---
+GRID_REGION = "WACM"
+
 # --- System-wide base (must stay constant across every voltage level) ---
 SBASE_MVA = 10.0
 
@@ -23,10 +26,10 @@ T1_PCT_Z = 8.0
 T1_PCT_R = 0.5
 
 # --- Bridging Transformer (13.8kV / 4.16kV) -- NEW, feeds the IEEE 13-bus model ---
-BRIDGE_RATING_KVA = 5000.0
+BRIDGE_RATING_KVA = 7500.0
 BRIDGE_PRIMARY_KV = T1_SECONDARY_KV
 BRIDGE_SECONDARY_KV = 4.16
-BRIDGE_PCT_Z = 5.5      # realistic value; the standalone IEEE13 case fakes near-zero Z
+BRIDGE_PCT_Z = 6.5      # realistic value; the standalone IEEE13 case fakes near-zero Z
 BRIDGE_PCT_R = 0.5
 
 # --- Downstream substation distribution (480V / 208V) ---
