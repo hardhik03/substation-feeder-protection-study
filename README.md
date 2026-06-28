@@ -138,11 +138,11 @@ python run_all.py
   approved at 2000 PES Summer Meeting. W.H. Kersting, NMSU.
 - IEEE Std C57.12.00-2021, C57.12.10-2017, C57.12.36-2017, C57.12.90,
   C57.91 — Transformer standards
-- IEEE Std C37.112-2018 — Inverse-Time Overcurrent Relay Equations
-- IEEE Std 141-1993 (Red Book) — Industrial Power Distribution
-- IEEE Std 242-2001 (Buff Book) — Protection and Coordination
-- ANSI C84.1-2020 — Voltage Ratings
-- NEMA MG1 — Motor and Generator Standards
-- EIA Open Data API — https://www.eia.gov/opendata/
+- IEEE Std C37.112-2018 : Inverse-Time Overcurrent Relay Equations
+- IEEE Std 141-1993 (Red Book) : Industrial Power Distribution
+- IEEE Std 242-2001 (Buff Book) : Protection and Coordination
+- ANSI C84.1-2020 : Voltage Ratings
+- NEMA MG1 : Motor and Generator Standards
+- EIA Open Data API : https://www.eia.gov/opendata/
 - Stojanovic & Djuric, Journal of Electrical Engineering, Vol 65,
-  No. 4, 2014 — relay curve constants verification
+  No. 4, 2014 : relay curve constants verification
