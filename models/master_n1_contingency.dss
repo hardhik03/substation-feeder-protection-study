@@ -1,0 +1,22 @@
+Clear
+
+! Source + Substation-------------
+Compile "substation_core.dss"
+
+! --- Briding Transformer to IEEE 13 Bus Feeder ----
+New Transformer.Bridge phases=3 windings=2
+~ wdg=1 bus=SubstationBus conn=wye kv=13.8 kva=7500 %r=0.5
+~ wdg=2 bus=650 conn=wye kv=4.16 kva=7500 %r=0.5
+~ XHL=5.728
+
+! --- Real-time Load Profile from EIA WACM----
+Compile "loadshape_wacm.dss"
+
+! --- IEEE 13 Bus Feeder ----------------
+Compile "ieee13_bridged.dss"
+
+!---- Voltage Bases ----------------
+Set Voltagebases=[69 13.8 4.16 0.48]
+calcvoltagebases
+
+solve

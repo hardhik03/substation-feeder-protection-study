@@ -1,0 +1,8 @@
+! LoadShape for scenario: peak_loading
+! Load multiplier: 1.2
+
+New LoadShape.WACMProfile
+~ npts=24
+~ interval=1
+~ mult=(1.0399 1.0399 1.034 1.0348 1.0385 1.0477 1.0652 1.0453 1.0604 1.0638 1.042 1.0091 0.9803 0.9622 1.1052 1.1048 1.1018 1.1056 1.1446 1.1843 1.2 1.1911 0.8962 1.1614)
+~ useactual=no

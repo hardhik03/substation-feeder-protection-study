@@ -67,3 +67,57 @@ Load data source: EIA WACM (Western Area Power Administration — Rocky Mountain
 - Minimum CTI requirement: 0.3s per IEEE 242-2001
 - Both scenarios pass with margin
 - TCC coordination plot: results/tcc_coordination.png
+
+## Phase 8: Scenario Analysis Results
+
+### Scenario Definitions
+| Scenario | Configuration | Key Change |
+|---|---|---|
+| Normal Operation | Baseline | Real WACM demand, ONAF rating |
+| ONAN Contingency | T1 at 7500 kVA | Cooling fans failed |
+| Unbalanced Loading | Phase A at 140% | Single-phase lateral stress |
+
+### Summary
+| Scenario | Min V (pu) | Max V (pu) | Violations | Status |
+|---|---|---|---|---|
+| Normal Operation | 0.9609 | 1.0284 | 0 | PASS |
+| ONAN Contingency | 0.9538 | 1.0264 | 0 | PASS |
+| Unbalanced Loading | 0.8999 | 1.0236 | 23 | FAIL |
+
+### Key findings
+- ONAN contingency: system survives cooling fan failure with reduced
+  margin (min voltage drops from 0.9609 to 0.9538 pu), which validates
+  ONAN/ONAF design decision documented in design basis
+- Unbalanced loading: Bus 652 (Phase A single-phase lateral) violates
+  ANSI C84.1 Range A limits across all 24 hours when Phase A loading
+  reaches 140%, the worst case 0.8999 pu at Hour 20 (peak demand)
+- All other buses remain within ANSI limits even under unbalanced
+  loading, confirming the single-phase lateral as the system's most
+  voltage-sensitive point
+- Comparison plot: results/scenario_comparison.png
+
+
+## Phase 8B: Sensitivity Sweep Results
+
+### Parameter swept: Bridge Transformer %Z (3.0% to 9.0%, steps of 0.5%)
+### %R held constant at 0.5% | Design point: 6.5% per IEEE C57.12.36-2017
+
+| %Z | XHL | Bus 650 V (pu) | Fault I (A) | CB2 Trip (s) |
+|---|---|---|---|---|
+| 3.0 | 2.9580 | 0.9687 | 11231 | 0.279 |
+| 4.5 | 4.4721 | 0.9645 | 9671 | 0.300 |
+| 6.5 | 6.4807 | 0.9587 | 8158 | 0.329 |
+| 8.5 | 8.4853 | 0.9528 | 7052 | 0.359 |
+| 9.0 | 8.9861 | 0.9513 | 6820 | 0.367 |
+
+
+### Key findings
+- Voltage stays within ANSI C84.1 Range A across entire sweep range
+- Protection coordination boundary: %Z < 4.5% causes CB2 to trip
+  faster than 0.3s target, risking coordination with CB1
+- Voltage margin boundary: %Z > 8.5% approaches ANSI lower limit
+  (0.9528 pu at 8.5%, limit is 0.95 pu)
+- Design point of 6.5% per IEEE C57.12.36-2017 sits in the optimal
+  window: voltage margin maintained, coordination preserved
+- Full results: results/sensitivity_bridge_z.csv
+- Plot: results/sensitivity_bridge_z.png

@@ -47,6 +47,8 @@ if __name__ == '__main__':
     run('4. 24-Hour Load Flow',           'run_loadflow.py')
     run('5. Short Circuit Study',         'run_short_circuit.py')
     run('6. Protection Coordination',     'run_protection_coordination.py')
+    run('7. Scenario Analysis',           'run_scenarios.py')
+    run('8. Sensitivity Sweep',           'run_sensitivity.py')
 
     print('\n' + '=' * 60)
     print('PIPELINE COMPLETE')

@@ -29,7 +29,7 @@ T1_PCT_R = 0.5
 BRIDGE_RATING_KVA = 7500.0
 BRIDGE_PRIMARY_KV = T1_SECONDARY_KV
 BRIDGE_SECONDARY_KV = 4.16
-BRIDGE_PCT_Z = 6.5      # realistic value; the standalone IEEE13 case fakes near-zero Z
+BRIDGE_PCT_Z = 6.5     # per IEEE C57.12.36-2017 Table, 5000-10000 kVA range at 110kV BIL
 BRIDGE_PCT_R = 0.5
 
 # --- Downstream substation distribution (480V / 208V) ---

@@ -8,7 +8,7 @@ protection coordination verified against IEEE standards.
 ## What this project does
 
 Models a complete T&D system in one continuous circuit:
-Utility (69kV, 5000 MVA fault level — WACM/WAPA, Fort Collins CO)
+Utility (69kV, 5000 MVA fault level : WACM/WAPA, Fort Collins CO)
 │
 T1: 69kV/13.8kV, 10 MVA, Delta/Wye-Grounded (IEEE C57.12.10)
 │
@@ -37,7 +37,7 @@ Runs a full analysis pipeline in one command:
   Collins, CO), not assumed static loads.
 - The IEEE 13-bus feeder uses the official EPRI/Kersting published
   test case, with the idealized infinite-bus source replaced by a
-  real finite-impedance substation — showing the actual voltage impact
+  real finite-impedance substation, showing the actual voltage impact
   of source impedance on feeder performance.
 - The entire pipeline is config-driven and parametric: change one
   value in config/system_parameters.py and regenerate everything.
@@ -138,11 +138,11 @@ python run_all.py
   approved at 2000 PES Summer Meeting. W.H. Kersting, NMSU.
 - IEEE Std C57.12.00-2021, C57.12.10-2017, C57.12.36-2017, C57.12.90,
   C57.91 — Transformer standards
-- IEEE Std C37.112-2018 — Inverse-Time Overcurrent Relay Equations
-- IEEE Std 141-1993 (Red Book) — Industrial Power Distribution
-- IEEE Std 242-2001 (Buff Book) — Protection and Coordination
-- ANSI C84.1-2020 — Voltage Ratings
-- NEMA MG1 — Motor and Generator Standards
-- EIA Open Data API — https://www.eia.gov/opendata/
+- IEEE Std C37.112-2018 : Inverse-Time Overcurrent Relay Equations
+- IEEE Std 141-1993 (Red Book) : Industrial Power Distribution
+- IEEE Std 242-2001 (Buff Book) : Protection and Coordination
+- ANSI C84.1-2020 : Voltage Ratings
+- NEMA MG1 : Motor and Generator Standards
+- EIA Open Data API : https://www.eia.gov/opendata/
 - Stojanovic & Djuric, Journal of Electrical Engineering, Vol 65,
-  No. 4, 2014 — relay curve constants verification
+  No. 4, 2014 : relay curve constants verification
