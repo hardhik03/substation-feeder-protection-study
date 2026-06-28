@@ -8,7 +8,7 @@ protection coordination verified against IEEE standards.
 ## What this project does
 
 Models a complete T&D system in one continuous circuit:
-Utility (69kV, 5000 MVA fault level : WACM/WAPA, Fort Collins CO)
+Utility (69kV, 5000 MVA fault level WACM/WAPA, Fort Collins CO)
 │
 T1: 69kV/13.8kV, 10 MVA, Delta/Wye-Grounded (IEEE C57.12.10)
 │
@@ -30,7 +30,7 @@ Runs a full analysis pipeline in one command:
 
 ## Why this is different from a typical student project
 
-- Every design parameter traces to a real IEEE/ANSI standard — no
+- Every design parameter traces to a real IEEE/ANSI standard, no
   assumed or AI-generated values. See docs/design_basis.md.
 - Load profile uses real hourly demand data from the EIA Open Data
   API (WACM balancing authority, the actual grid region for Fort
