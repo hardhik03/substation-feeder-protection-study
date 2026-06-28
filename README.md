@@ -27,6 +27,8 @@ Runs a full analysis pipeline in one command:
 4. Three-phase short circuit study across all key buses
 5. Protection coordination with TCC curve generation
 6. Regression testing to catch model breakage automatically
+7. Scenario analysis (normal / ONAN contingency / unbalanced loading)
+8. Sensitivity sweep (bridge transformer %Z vs voltage, fault current, relay timing)
 
 ## Why this is different from a typical student project
 
@@ -50,6 +52,23 @@ Runs a full analysis pipeline in one command:
   verified against hand calculation within 0.6%
 - Protection coordination passes at all fault current levels:
   minimum CTI = 0.631s (requirement: 0.3s per IEEE 242-2001)
+
+**Scenario Analysis (Phase 8A):**
+- Normal operation: all buses 0.96–1.03 pu, no violations
+- ONAN contingency (cooling fans failed): min voltage drops to
+  0.9538 pu — system survives with reduced margin
+- Unbalanced loading (Phase A at 140%): Bus 652 violates ANSI
+  limits across all 24 hours (min 0.8999 pu) — single-phase
+  lateral identified as most voltage-sensitive point
+
+**Sensitivity Sweep (Phase 8B):**
+- Bridge transformer %Z swept from 3% to 9% (design point 6.5%
+  per IEEE C57.12.36-2017)
+- Protection coordination boundary: %Z < 4.5% risks CB2 tripping
+  too fast for coordination with CB1
+- Voltage margin boundary: %Z > 8.5% approaches ANSI lower limit
+- Design point of 6.5% confirmed optimal — voltage margin and
+  coordination both maintained
 
 ## Tools and standards
 
@@ -95,6 +114,9 @@ Runs a full analysis pipeline in one command:
 │   ├── run_short_circuit.py    ← fault study across key buses
 
 │   └── run_protection_coordination.py  ← TCC + CTI verification
+
+│   ├── run_scenarios.py            ← three-scenario analysis (normal/ONAN/unbalanced)
+│   └── run_sensitivity.py          ← bridge transformer %Z sensitivity sweep
 
 ├── docs/
 
