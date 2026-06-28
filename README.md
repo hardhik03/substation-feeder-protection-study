@@ -8,7 +8,7 @@ protection coordination verified against IEEE standards.
 ## What this project does
 
 Models a complete T&D system in one continuous circuit:
-Utility (69kV, 5000 MVA fault level — WACM/WAPA, Fort Collins CO)
+Utility (69kV, 5000 MVA fault level WACM/WAPA, Fort Collins CO)
 │
 T1: 69kV/13.8kV, 10 MVA, Delta/Wye-Grounded (IEEE C57.12.10)
 │
