@@ -70,6 +70,11 @@ Runs a full analysis pipeline in one command:
 - Design point of 6.5% confirmed optimal — voltage margin and
   coordination both maintained
 
+![24-hour voltage profile](results/voltage_profile_24hr.png)
+![TCC coordination curves](results/tcc_coordination.png)
+![Scenario voltage comparison](results/scenario_voltage_comparison.png)
+![%Z sensitivity sweep](results/sensitivity_bridge_z.png)
+
 ## Tools and standards
 
 | Tool/Standard | Purpose |
